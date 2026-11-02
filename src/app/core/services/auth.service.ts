@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   register(account: Account) {
-    const body = new HttpParams().set('username', account.username).set('password', account.password).set('role', account.role);
+    const body = new HttpParams().set('username', account.username).set('password', account.password);
     const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
 
     return this.http.post(`${environment.apiUrl}/users/register`, body, { headers, responseType: 'json', withCredentials: true });

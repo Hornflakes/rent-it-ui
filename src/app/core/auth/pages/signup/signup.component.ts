@@ -77,8 +77,7 @@ export class SignupComponent implements OnInit {
     this.submitted = true;
     const account: Account = {
       username: this.username.value,
-      password: this.password.value,
-      role: 'client'
+      password: this.password.value
     }
 
     if(this.signupForm.valid) {
